@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaido Wellbeing</title>
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+
+<style>
+
+* { box-sizing: border-box }
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Helvetica Neue', Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 300;
+}
+
+body {
+    z-index:0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Helvetica Neue', Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 300;
+    font-size:14px;
+    line-height:17px;
+    color:#333;
+}
+
+.lo-container {
+    padding:0 50px;
+    max-width:1200px;
+    width:100%;
+    margin:0 auto;
+}
+.lo-page {
+  display:none;
+}
+
+#section-2, #section-3, #section-4 {
+  display:none;
+}
+#section-1, #section-2, #section-3 , #section-4 {
+  text-align:center;
+}
+h4 {
+  margin:0 0 10px 0;
+}
+p {
+  margin: 0 0 20px 0;
+}
+.pure-button {
+  display:block;
+  margin:0 auto;
+  padding:8px 50px;
+}
+h1 {
+  text-align:center;
+  margin-bottom:20px;
+}
+input {
+  display:block;
+  margin:0 auto 10px auto;
+  padding:10px;
+  border-radius:3px;
+  border:1px solid #ccc;
+  text-align:center;
+}
+select {
+  margin-bottom:10px;
+  text-align:center;
+}
+</style>
+
+</head>
+<body>
+<div id="home-page" class="lo-page">
+  <div class="lo-container">
+    <button class="pure-button login-button">Log In</button>
+    <button class="pure-button register-button">Register</button>
+  </div>
+</div>
+
+<div id="login-page" class="lo-page">
+  Login
+</div>
+
+<div id="registration-page" class="lo-page">
+  <div class="lo-container">
+    <h1>Kaido Wellbeing</h1>
+    <!--<h2>Welcome to the Kaido Wellbeing January Challenge.</h2>
+    <div class="intro">
+    </div>-->
+
+    <div id="section-1">
+      <h3>Register For Challenge</h3>
+      <p>Please register below and we will email you a link to the mobile app and website before the challenge begins.</p>
+      <form id="registration-form">
+        <!--<h4>Email Address</h4>-->
+        <input type="email" id="form-email" placeholder="Email Address" required="required"/>
+        <!--<h4>Password</h4>-->
+        <input type="password" id="form-password" placeholder="Password" required="required"/>
+        <!--<h4>First Name</h4>-->
+        <input type="text" id="form-first-name" placeholder="First Name" required="required"/>
+        <!--<h4>Last Name</h4>-->
+        <input type="text" id="form-last-name" placeholder="Last Name" required="required"/>
+
+        <button class="pure-button">Register</button>
+      </form>
+    </div>
+
+    <div id="section-2">
+      <h3>Select Your Company</h3>
+      <p>Please enter the four digit company code</p>
+      <form id="company-lookup-form">
+        <input type="number" length="4" placeholder="Company Code" required="required" id="form-company-code"/>
+        <button class="pure-button">Lookup</button>
+      </form>
+    </div>
+
+    <div id="section-3">
+      <h3>Select Your Unit</h3>
+      <p>You've been successfully registered with <span class="company-name"></span>.</p>
+      <p>Please choose your buisness department/office to complete your registration.</p>
+      <form id="unit-form">
+        <select id="form-unit"></select>
+        <button class="pure-button">Register</button>
+      </form>
+    </div>
+
+    <div id="section-4">
+      <h3>Successfully Registered</h3>
+      <p>Congratulations - you have been successfully registered for the January challenge.</p>
+      <p>We will email you with more details before the challenge begins.</p>
+    </div>
+  </div>
+</div>
+
+<div id="insights-page" class="lo-page">
+  <div class="lo-container">
+    INSIGHTS!!!
+  </div>
+</div>
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script src="js/kaido.js"></script>
+<script src="js/home.js"></script>
+<script src="js/registration.js"></script>
+<script src="js/login.js"></script>
+<script src="js/insights.js"></script>
+
+
+<script>
+Kaido.initialize()
+</script>

@@ -1,0 +1,4 @@
+Kaido.initializeInsightsPage = function() {
+}
+
+
